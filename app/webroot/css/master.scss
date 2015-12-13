@@ -1,0 +1,371 @@
+@charset "UTF-8";
+
+/*-----------------------------------
+master.scss
+
+-----------------------------------*/
+// import other style sheets
+@import url('normalize.css');
+@import url('flags32.css');
+@import url('jquery-ui.min.css');
+@import url("http://fonts.googleapis.com/css?family=Lato:400,700,400italic&subset=latin,latin-ext");
+
+@import "foundation";
+
+a { color: #2ba6cb; }
+
+header > h2 {
+	text-align: center;
+}
+
+.button[disabled] {
+	background-color: #555;
+	border-color: #333;
+	&:hover {
+		background-color: #555;
+	}
+}
+
+.panel {
+	width: 100%;
+	display: none;
+	position: absolute;
+	min-height: 15%;
+	z-index: 2;
+	padding: 1.5em 1em;
+
+	&.gm {
+		background-color: $gm-bg-clr;
+	}
+	&.tp {
+		background-color: $tp-bg-clr;
+	} 
+	&.kl {
+		background-color: $kl-bg-clr;
+	}
+
+	table {
+		background: none;
+		border: none;
+		thead {
+			background: none;
+		}
+		tr:nth-of-type(even) {
+			background: none;
+		}
+	}
+
+	li {
+		list-style-type: none;
+		font-size: 1.2em;
+	}
+}
+
+.top-bar-section {
+	img {
+		height: 2em;
+	}
+	li.active a[data-panel='gm'] {
+		background-color: $gm-bg-clr !important;
+	}
+	li.active a[data-panel='tp'] {
+		background-color: $tp-bg-clr !important;
+	}
+	li.active a[data-panel='kl'] {
+		background-color: $kl-bg-clr !important;		
+	}
+}
+
+#notifications {
+	padding: 1em 0;
+	.alert-box { // override foundation alert box settings
+		margin-bottom: 0.325em;
+	}
+}
+
+.has-tip { // override foundation class
+	font-weight: normal;
+	color: inherit;
+}
+
+.joker { 
+	background: url('../img/joker_icon.png') no-repeat right top ;
+}
+
+// colors for results
+.pts0 { }
+.pts1, .pts2  { background-color: $cr-clr ;}
+.pts3, .pts6  { background-color: $cd-clr ;}
+.pts5, .pts10 { background-color: $cs-clr ;}
+.closest { background-color: $cr-clr; }
+
+span.pos {
+	color: inherit;
+}
+
+span.neg {
+	color: #f22;
+}
+
+body {
+	//background: $bg-clr;
+	//color: $fg-clr;
+	font-family: 'Lato', 'Helvetica', sans-serif;
+}
+
+header[role="banner"] {
+	height: 15em;
+	background: rgb(64,64,255);
+	&>div {
+		vertical-align: middle;
+		padding: 1em;
+		letter-spacing: 0.1em;
+		background-image: url(../img/banner-2.png);
+		background-size: 100%;
+		min-height: 95%;
+		div {
+			margin: 0 auto;
+		}
+	}
+	a {
+		color: rgba(44, 42, 51, 0.8);
+		font-family: Impact, arial;
+		font-weight: bold;
+		font-size: 4em;
+	}
+	img {
+		height: 12rem;
+		width: 12rem;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.adminoption a {
+	background-color: #300 !important;
+	&:hover {
+		background-color: #200 !important;
+	}
+}
+
+.tb-user > a {
+	&:hover {
+		background: #322 !important;
+	}
+	background: #433 !important;
+}
+
+.betdate {
+	width: 100px !important;
+	max-width: 150px !important;
+}
+
+.grid {
+	td, th {
+		height: 35px;
+		min-width: 35px;
+		font-size: 12px;
+		border: 1px solid #222 !important;
+		padding: 0;
+		line-height: 0;
+		text-align: center;
+		//vertical-align: middle !important;
+		padding: 0 0.3em;
+	}
+	span {
+		padding-left: 30px;
+		padding-right: 8px;
+		max-width: 230px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	input[type="text"] {
+		width: 2em;
+		padding: 2px;
+		vertical-align: middle;
+		text-align: center;
+		margin-bottom: 0;
+		display: inline !important;
+	}
+	input[type="radio"] {
+		display: inline !important;
+		margin-bottom: 0;
+	}
+	input[type="text"] {
+		height: 2rem;
+	}
+}
+
+@mixin teamlink($lh) {
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		line-height: $lh;
+		overflow: hidden;
+		color: #fff;
+	}
+	a:hover {
+		background-color: darken($team-bg-clr, 5%);
+		color: inherit;
+	}
+}
+
+.grid-header {
+	white-space: nowrap;
+	padding: 0 0.5em !important;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 230px !important;
+}
+
+.bet-grid td, .bet-grid th {
+	vertical-align: middle;
+	text-align: center;
+	padding: 3px;
+	font-size: 11px;
+}
+
+td.bet-cell {
+	min-width: 130px;
+}
+
+.bet {
+	padding: 0 0 0 10px;
+	border-radius: 7px;
+	line-height: 22px;
+	background-color: #666672;
+	color: #fff;
+	width: 120px;
+	margin: 0 auto;
+}
+
+.betamt {
+	text-shadow: #333 1px 1px 1px;
+}
+
+.outcome {
+	width: 33%;
+	border-radius: 0 7px 7px 0;
+	float: right;
+	padding: 0 0.1em;
+	margin: 0;
+	text-align: center;
+}
+
+.gbet {
+	background-color: #060;
+}
+
+.bbet {
+	background-color: #800;
+}
+
+.news-item {
+	background-color: #e7e5e5;
+	padding: 0;
+	margin: 1em 0;
+	font-size: 0.85rem;
+	header {
+		padding: 0.2rem 0.5rem;
+	}
+	footer {
+		font-size: 0.8rem;
+		background-color: darken(#e7e5e5, 10%);
+		padding: 0.2rem;
+	}
+	.news-body {
+		padding: 0.2rem 0.5rem;
+	}
+}
+
+.betedit {
+	input[type="checkbox"] {
+		margin: 0;
+	}
+	.odds-buttons button[disabled] {
+		background-color: desaturate($button-bg-color, 100%);
+		border-color: desaturate($button-border-color, 100%)
+	}
+	td {
+		padding: 0 0.5rem;
+	}
+	button.tiny {
+		width: 4rem;
+		margin: 0.8rem 0.2rem;
+	}
+}
+
+.bet-amt {
+	width: 36px;
+	height: 36px;
+	text-align: center;
+}
+
+.matchresult {
+	border-collapse: separate;
+	border-spacing: 5px;
+	border: 0;
+	width: 100%;
+	text-align: center;
+	td {
+		font-size: 2rem;
+		text-align: center;
+		color: #fff;	
+	}
+	.teams {
+		background-color: $team-bg-clr;
+		width: 60%;
+		margin: 0;
+		padding: 0;
+		@include teamlink(2.8em);
+		&:hover {
+			background-clr: scale-color($team-bg-clr, $lightness: -6%);
+		}
+		
+	}
+	.score {
+		width: 10%;
+		background-color: $score-bg-clr;
+		&:hover {
+			background-color: scale-color($score-bg-clr, $lightness: -6%);
+		}
+	}
+}
+
+td.teamflag {
+	padding: 0;
+	.flag {
+		margin: 0;
+		padding: 0 0 0 40px;
+		vertical-align: middle;
+		height: 35px;
+		max-height: 35px;
+		width: 100%;
+		display: table-cell;
+	}
+}
+
+div.world {
+	background: url(/img/world_countries_map.png) no-repeat;
+	display: block;
+	height: 547px;
+	width: 1069px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.life {
+	font-size: 24px;
+	color: green;
+	&.lost {
+		color: red;
+	}
+}
+
+.score_val_err {
+	color: red !important;
+	background-color: #f66 !important;
+	border-color: red;
+}
+
