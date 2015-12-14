@@ -4,4 +4,4 @@ Sadly, you have lost all remaining lives in Killer Goalmine game <?php echo $gam
 You can follow the remaining players from the link below.
 
 --
-http://goalmine.eu/killers/view/<?php echo $game; ?>
+http://goalmine.eu/killer/<?php echo $game; ?>
