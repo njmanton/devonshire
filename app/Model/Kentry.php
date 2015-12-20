@@ -152,14 +152,14 @@ class Kentry extends AppModel {
 			'conditions' => ['Kentry.week_id' => $wid, $kid => null, 'pred' => null]
 		];
 		$nullKentries = $this->find('all', $arr);
-debug ($nullKentries);
+
 		foreach ($nullKentries as $k=>$v) {
 			$uid = $v['Kentry']['user_id'];
 			$rid = $v['Kentry']['round_id'];
 			if ($v['Kentry']['lives'] < 2) {
 				// dead!
 				$email = new CakeEmail('default');
-				$email->from($from)
+				$email->from(['noreply@goalmine.eu' => 'Killer Goalmine']) // this was previously set as $from - which is out of scope for this function
 							->to($v['User']['email'])
 							->subject('Killer GoalMine update')
 							->template('killer_result_dead')
