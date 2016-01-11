@@ -40,8 +40,10 @@
 				<td><?php echo $m['Match']['odds2']; ?></td>
 				<td class="gotw-row"><?php echo ($m['Match']['gotw']) ? '&#10004;' : '&nbsp;' ; ?></td>
 				<td>
-					<?php 
-						$c = count($m['Prediction']) + count($m['Bet']);
+					<?php
+						// fixed 11/1/16
+						// $c is true if there's a prediction made on the game OR a bet made OR it's a killer game. Shouldn't be able to delete these matches
+						$c = (count($m['Prediction']) || count($m['Bet']) || ($m['Match']['game'] & 4));
 						if (!$c) {
 							echo $this->Html->link('Delete', ['action' => 'delete', $m['Match']['id']], ['class' => 'del tiny button alert']);
 						}''
