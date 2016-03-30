@@ -3,10 +3,10 @@ A web-based football predictions game. Built using PHP/CakePHP/Node
 
 ## History
 
-* **1.0** (worldcup)
+* **1.0 (worldcup)**
 July 2010 World Cup
 
-* **2.0**
+* **2.0 (GM2012)**
 Premier Season 2010/11 + 2011/12
 
 * **3.0 (euro)**
@@ -20,10 +20,10 @@ Premier Season 2012/13
 Dec 2012 Premier Season 2012/13 + 2013/14
 added tipping and killer games
 
-* **5.0 (hurst)**
+* **5.0 ([hurst](https://github.com/njmanton/hurst.git))**
 July 2014 World Cup 2014
 
-* **6.0 (devonshire)**
+* **6.0 ([devonshire](https://github.com/njmanton/devonshire.git))**
 August 2014 Premier season 2014/15
 
 * **6.1 (devonshire)**
