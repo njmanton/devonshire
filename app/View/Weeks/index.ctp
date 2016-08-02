@@ -2,7 +2,7 @@
 <section>
 	<header>
 		<h2>List of weeks</h2>
-		<p>The table below lists Goalmine weeks for the 2015/16 season. Where available, you can drill into the predictions and bets for each week.</p>
+		<p>The table below lists Goalmine weeks for the 2016/17 season. Where available, you can drill into the predictions and bets for each week.</p>
 	</header>
 
 	<ul class="tabs" data-tab>
