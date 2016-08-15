@@ -18,10 +18,9 @@ class BetsController extends AppController {
 		}
 
 		// work out whether the week in question is over, or not
-		$dl = new DateTime($this->Bet->Match->Week->field('start', ['id' => $week]));
+		$dl = new DateTime($this->Bet->Match->Week->field('start', ['id' => $week]), new DateTimeZone('UTC'));
 		$dl->add(new DateInterval(DEADLINE_OFFSET)); // changed to two days - need to revert for next season
 		$now = new DateTime();
-
 		// if expired, redirect to the results, otherwise push data to view
 		if ($now > $dl) {
 			$this->flash('The deadline for this week has expired. Redirecting to results', '/bets/view/' . $week, 2);

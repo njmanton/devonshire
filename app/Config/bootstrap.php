@@ -188,7 +188,7 @@ const START_WEEK = 401;
 const LEAGUE_START_WEEK = 401; // changed for 2015-16 season, from 25
 const LEAGUE_WEEKS = 30;
 
-const DEADLINE_OFFSET = 'PT11H45M'; // this is the time offset after the start of the week (which is always midnight Saturday), using php date_interval notation
+const DEADLINE_OFFSET = 'PT11H'; // this is the time offset after the start of the week (which is always midnight Saturday), using php date_interval notation
 
 const CLOSEST_PTS = 3;
 const CS_PTS = 5;
