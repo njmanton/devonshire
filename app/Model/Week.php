@@ -200,7 +200,7 @@ class Week extends AppModel {
 		]];
 		$this->Match->Prediction->User->Ledger->create();
 		$this->Match->Prediction->User->Ledger->save($tosave);
-		$this->log(__('Week: %s set as finalised', $week), $admin);
+		$this->log(__('Week: %s set as finalised', $week), 'admin');
 
 	} // end processComplete
 
