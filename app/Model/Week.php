@@ -114,9 +114,9 @@ class Week extends AppModel {
 
 		// checks to see whether all the results for a given week have been entered
 		$arr = [
-			'fields' => ['id','score'],
+			'fields' => ['id', 'score'],
 			'recursive' => 0,
-			'conditions' => ['week_id' => $week, 'game & 1 != 0']
+			'conditions' => ['week_id' => $week]
 		];
 
 		$results = $this->Match->find('all', $arr);
@@ -200,7 +200,7 @@ class Week extends AppModel {
 		]];
 		$this->Match->Prediction->User->Ledger->create();
 		$this->Match->Prediction->User->Ledger->save($tosave);
-		$this->log(__('Week: %s set as finalised', $week), 'admin');
+		$this->log(__('Week: %s set as finalised by %s', $week, $userid), 'admin');
 
 	} // end processComplete
 
