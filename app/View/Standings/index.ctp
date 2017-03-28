@@ -15,7 +15,7 @@
 	</header>
 	
 	<p>This table shows the overall league positions in this season of Goalmine. Only the top <strong>30</strong> scores in the season count towards the total.</p>
-	<p>The final column shows the lowest score achieved (or 25th lowest score). Once a player has played 25 weeks this is the score at risk and will be dropped in favour of any better score.</p>
+	<p>The final column shows the lowest score achieved (or 30th lowest score). Once a player has played 30 weeks this is the score at risk and will be dropped in favour of any better score.</p>
 	<table class="table">
 		<thead>
 			<tr>
